@@ -1,12 +1,12 @@
 
 var Game = {
 
-    move: (player, row, col) => {
+    move: function (player, row, col) {
         // MAKE THIS FUNCTION WORK
         // Pass all the tests
     },
     
-    create: () => {
+    create: function () {
         var game = Object.create(this);
         game.board = [
             ['-', '-', '-'],
