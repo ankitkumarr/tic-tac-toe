@@ -1,27 +1,54 @@
 ## TicTacToe Test
 
-#### Initial Setup
+#### Recommended But Not Required Pre-Setup
 
-Clone repository: `$ git clone git@github.com:zimmed/tic-tac-toe.git`
+Fork this repo into your own github account, and change your origin to your owned repo.
 
-CD into cloned directory: `$ cd tic-tac-toe`
+Enter the following into your project directory once you have forked the repo:
+`$ git remote set-url origin git@github.com:<your_user>/tic-tac-toe.git`
 
-Create a working branch: `$ git checkout -b game-move-<your-name>`
+Then use `$ git pull` or `$ git fetch` to expose the new branches.
 
-Install dependencies: `> npm i -g mocha` & `> npm i`
+#### New Setup
+
+Checkout the new branch: `$ git checkout template-2`
+
+Create your own working branch: `$ git checkout -b template-2-<your-name>`
+
+Install dependencies: `> npm i`
 
 #### Development
 
 First run the mocha-chai tests: `> npm test`
 
-Notice only the first three tests pass. Open game/game-spec.js, and locate the passing tests.
+Use the tests in the src/game/board-spec.js to guide you in filling out all of the missing code to pass the failing Board tests.
 
-These have been solved for you with the Game.create method. You don't need to modify this method.
+Next look at src/game/game-spec.js and src/game/game.js. Here you will need to add the missing code to the Game class
+as well as finish writing the tests for the more advanced logic. Bonus points for writing tests before implementation.
 
-The remaining tests rely on a functioning Game.move method for the game instance. Read through the
-remaining tests, then begin filling out the Game.move code to satisfy these requirements.
+Remember to pay attention, because the structure (and even variable names) have changed since the last version.
 
-After each small change you make, you can re-run `npm test` to see if you have successfully met the
-requirements of the next test.
+#### Hints
 
-When all the tests are passing, let me know.
+Search for "TODO" in the files to find the sections that need to be completed.
+
+Google `Chai Expect` to find documentation for all of the chain methods that you can use when writing tests.
+
+Use `> node` to enter a live Node.js interpreter. Here you can test concepts and syntax like so:
+```
+> function MyClass (data) {
+... this.data = data;
+... this.empty = () => { this.data = null; };
+... }
+[Function]
+> var myObj = new MyClass(17);
+[Object object]
+> myObj.data
+17
+> myObj.empty()
+undefined
+> myObj.data
+null
+```
+
+Let me know when all the tests pass.
