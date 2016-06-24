@@ -10,7 +10,7 @@ var Board = {
      */
     getIndex: function (row, col) {
         // TODO make this return the correct model index.
-        return 0;
+        return ((row-1)*3) + (col - 1);
     },
 
     /**
